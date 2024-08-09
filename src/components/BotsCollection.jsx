@@ -1,8 +1,15 @@
 import React from 'react'
+import BotCard from './BotCard'
 
-const BotsCollection = () => {
+const BotsCollection = ({bots}) => {
+
+    
   return (
-    <div>BotsCollection</div>
+    <div>
+ {bots.map(bot => (
+        <BotCard key={bot.id} bot={bot}  />
+      ))}
+    </div>
   )
 }
 
