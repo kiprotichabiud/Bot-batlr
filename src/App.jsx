@@ -1,8 +1,12 @@
 import React from 'react'
+import BotsPage from './components/BotsPage'
+
 
 const App = () => {
   return (
-    <div>App</div>
+    <div>
+<BotsPage/>
+      </div>
   )
 }
 
