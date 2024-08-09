@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BotCard = () => {
+const BotCard = ({bot}) => {
   return (
     <div>
          <img src={bot.avatar_url} alt={bot.name} />
