@@ -13,7 +13,7 @@ const BotsPage = () => {
 
 
   return (
-    <div>
+    <div className='' >
         <BotsCollection bots={bots}/>
     </div>
   )

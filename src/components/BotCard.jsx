@@ -2,7 +2,7 @@ import React from 'react'
 
 const BotCard = ({bot}) => {
   return (
-    <div>
+    <div className='flex-wrap border-2 justify-center text-center shadow-md'>
          <img src={bot.avatar_url} alt={bot.name} />
       <h3>{bot.name}</h3>
       <p>Class: {bot.bot_class}</p>
@@ -11,7 +11,7 @@ const BotCard = ({bot}) => {
       <p>Armor: {bot.armor}</p>
       <p>Catchphrase: {bot.catchphrase}</p>
     </div>
-  )
+  )   
 }
 
 export default BotCard
