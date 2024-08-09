@@ -1,15 +1,21 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import BotsCollection from './BotsCollection'
 
 const BotsPage = () => {
+    const [bots, setBots] = useState([]);
 
-    fetch('http://localhost:3000/bots')
-    .then(response => response.json())
-    .then(bots => console.log(bots))
-    
+
+    useEffect(() => {
+        fetch('http://localhost:3000/bots')
+          .then(response => response.json())
+          .then(bots => setBots(bots));
+      }, []);
 
 
   return (
-    <div>BotsPage</div>
+    <div>
+        <BotsCollection bots={bots}/>
+    </div>
   )
 }
 
