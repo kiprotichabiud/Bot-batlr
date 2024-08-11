@@ -11,10 +11,21 @@ const BotsPage = () => {
           .then(bots => setBots(bots));
       }, []);
 
+    
+
+      const dischargeBot = (botId) => {
+        fetch(`http://localhost:3000/bots/${botId}`, {
+          method: 'DELETE'
+        })
+          .then(() => {
+            setBots(bots.filter(b => b.id !== botId));
+            
+          });
+      };
 
   return (
     <div className='' >
-        <BotsCollection bots={bots}/>
+        <BotsCollection bots={bots} onDischarge={dischargeBot}/>
     </div>
   )
 }
