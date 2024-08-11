@@ -1,12 +1,13 @@
 import React from 'react'
 
-const BotCard = ({bot ,onDischarge}) => {
+const BotCard = ({bot ,onDischarge,onAdd}) => {
 
 
 
     
   return (
-    <div className='flex flex-col items-center border-2  rounded-lg p-4 shadow-md max-w-[320px] '>
+    <div onClick={onAdd} className='flex flex-col items-center border-2  rounded-lg p-4 shadow-md max-w-[320px] '>
+        
     <img
       src={bot.avatar_url}
       alt={bot.name}
@@ -20,10 +21,10 @@ const BotCard = ({bot ,onDischarge}) => {
       <p className='text-sm mb-4 text-center'>Catchphrase: {bot.catchphrase}</p>
 
       <button className="bg-red-700 text-white px-4 py-2 rounded hover:bg-red-800" onClick={onDischarge}>x</button>
-        
-        
+    
+      </div>
       
-    </div>
+    
   )   
 }
 

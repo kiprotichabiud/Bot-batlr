@@ -2,7 +2,7 @@ import React from 'react'
 import BotCard from './BotCard'
 
 
-const BotsCollection = ({bots ,onDischarge }) => {
+const BotsCollection = ({bots ,onDischarge, onAdd }) => {
 
     
   return (
@@ -10,7 +10,9 @@ const BotsCollection = ({bots ,onDischarge }) => {
  {bots.map(bot => (
         <BotCard key={bot.id}
          bot={bot}
-         onDischarge={() => onDischarge(bot.id)} />
+         onDischarge={() => onDischarge(bot.id)}
+         onAdd={() => onAdd(bot.id)} />
+         
          
       ))}
     </div>
