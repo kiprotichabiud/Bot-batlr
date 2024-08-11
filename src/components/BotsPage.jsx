@@ -46,8 +46,8 @@ const BotsPage = () => {
         
 
         
-      <h1 className='justify-center p-4 text-center m-4 font-bold shadow-lg'>Bot Battle</h1>
-      <h2>Your Army</h2>
+      <h1 className='justify-center p-4 text-center m-4 font-extrabold shadow-lg'>Bot Battle</h1>
+      <h2 className=' font-bold m-4 p-4'>Your Army</h2>
       <YourBotArmy
         bots={botArmy}
         onRemove={removeBot}

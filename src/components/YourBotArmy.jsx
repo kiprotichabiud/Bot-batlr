@@ -4,10 +4,11 @@ import BotCard from './BotCard'
 const YourBotArmy = ({bots, onRemove}) => {
 
   return (
-    <div>
+    <div className=' flex'>
  {bots.map(bot => (
-        <BotCard key={bot.id} bot={bot} 
-        onDischarge={() => onRemove(bot.id)} />
+        <BotCard  key={bot.id} bot={bot} 
+        onDischarge={() => onRemove(bot.id)}
+         />
       ))}
     </div>
   )
