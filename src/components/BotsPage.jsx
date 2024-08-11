@@ -8,7 +8,7 @@ const BotsPage = () => {
 
 
     useEffect(() => {
-        fetch('http://localhost:3000/bots')
+        fetch('https://bot-battlr-db-eight.vercel.app/bots')
           .then(response => response.json())
           .then(bots => setBots(bots));
       }, []);
@@ -16,7 +16,7 @@ const BotsPage = () => {
     
 
       const dischargeBot = (botId) => {
-        fetch(`http://localhost:3000/bots/${botId}`, {
+        fetch(`https://bot-battlr-db-eight.vercel.app/bots/${botId}`, {
           method: 'DELETE'
         })
           .then(() => {
@@ -25,7 +25,7 @@ const BotsPage = () => {
           });
       };
       const removeBot = (botId) => {
-        fetch(`http://localhost:3000/bots/${botId}`, {
+        fetch(`https://bot-battlr-db-eight.vercel.app/bots/${botId}`, {
           method: 'DELETE'
         })
           .then(() => {
